@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="SettingsScript.js"></script>
+</head>
+<body>
+    <h1>Settings</h1>
+    <div>
+        <input type="text" placeholder="maze name" id="name" class="col1" value= localStorage/>
+    </div>
+    <br/>
+    <div>
+        <input type="number" placeholder="maze rows number" id="rows" class="col1"/>
+    </div>
+    <br />
+
+    <div>
+        <input type="number" placeholder="maze cols number" id="cols"class="col1" />
+    </div>
+    <br />
+
+    <div>
+        <input type="text" placeholder="default ip address" id="ip" class="col1"/>
+    </div>
+    <br />
+
+    <div>
+        <input type="number" placeholder="default port" id="port" class="col1"/>
+    </div>
+    <br/>
+    <div>
+        <select id="searchAlgo"  >
+            <option value="bfs" selected >Bfs</option>
+            <option value="dfs">Dfs</option>
+        </select>
+    </div>
+    <br/>
+    <button onclick="saveSettings()" id="saveSettings">Save Settings</button>
+    <script>
+        function saveSettings() {
+            localStorage.setItem("mazeName", document.getElementById('name').value);
+             localStorage.setItem("rows", document.getElementById('rows').value);
+             localStorage.setItem("cols", document.getElementById('cols').value);
+             localStorage.setItem("ip", document.getElementById('ip').value);
+             localStorage.setItem("port", document.getElementById('port').value);
+             localStorage.setItem("algorithm", document.getElementById('searchAlgo').value);
+        }
+        
+          
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Maze Game</title>
+<meta charset="utf-8"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="MainStyle.css"/>
+
+<script src="dynamicDivContent.js"> </script>
+
+</head >
+<body  onload="loadPage('HomePage.html')">
+
+    <div id="myNavBar">
+        <ul>
+            <li><a onclick="loadPage('HomePage.html')">HomePage</a></li>
+            <li><a onclick="loadPage('SinglePlayerPage.html')">Single Player</a></li>
+			<li><a onclick="loadPage('MultiPlayerPage.html')">Multi Player</a></li>
+            <li><a onclick="loadPage('SettingsPage.html')">Settings</a></li>
+            <li style="float:right"><a class="sidebar"onclick="loadPage('LoginPage.html')">Login</a></li>
+            <li style="float:right"><a class="sidebar" onclick="loadPage('RegisterPage.html')">Register</a> </li>
+        </ul>
+    </div>
+
+    <div id="dynamicContent" ></div>
+    
+</body>
+</html>
